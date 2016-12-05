@@ -7,7 +7,7 @@ This repository contains sample scripts for deploying Mumuki Platform services, 
 
 ```
 # download some script
-wget https://github.com/mumuki/mumuki-escualo-sample-scripts/blob/master/server.simple.atheneum.yml 
+wget https://raw.githubusercontent.com/mumuki/mumuki-escualo-sample-scripts/master/server.simple.atheneum.yml
 
 # edit the script as needed. Replace any <VARIABLE> with your configurations before proceeding. 
 vim server.simple.atheneum.yml 
