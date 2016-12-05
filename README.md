@@ -16,7 +16,7 @@ vim server.simple.atheneum.yml
 gem install escualo
 
 # run the script!
-escualo script server.simple.atheneum.yml --hostname <HOSTNAME> --verbose --traceYOUR_HOSTNAMEb
+escualo script server.simple.atheneum.yml --hostname <HOSTNAME> YOUR_HOSTNAME --verbose --trace
 ```
 
 :warning: **The scripts are not meant to be used as-is**. They contain `<VARIABLES>` that must be replaced by the script user before running `escualo script`. 
