@@ -1,7 +1,7 @@
 # simple server Atheneum is a normal Atheneum that has
 # simply discards contents of queue
 local:
- - bootstrap --monit-password <MONIT_PASSWORD>
+ - bootstrap --with-rbenv --monit-password <MONIT_PASSWORD>
 remote:
  - env set SECRET_KEY_BASE=<SECRET>
            PGDATABASE=atheneum
