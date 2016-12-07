@@ -3,12 +3,12 @@
 #
 # See https://github.com/mumuki/mumuki-desktop
 local:
- - bootstrap --monit-password <MONIT_PASSWORD>
+ - bootstrap --monit-password '<MONIT_PASSWORD>'
 remote:
- - env set SECRET_KEY_BASE=<SECRET>
+ - env set SECRET_KEY_BASE='<SECRET>'
            PGDATABASE=atheneum
-           POSTGRESQL_DB_USERNAME=<POSTGRE_USERNAME>
-           POSTGRESQL_DB_PASSWORD=<POSTGRE_PASSWORD>
+           POSTGRESQL_DB_USERNAME='<POSTGRE_USERNAME>'
+           POSTGRESQL_DB_PASSWORD='<POSTGRE_PASSWORD>'
            POSTGRESQL_DB_HOST=localhost
            MUMUKI_QUEUELESS_MODE=true
            MUMUKI_SINGLE_USER_MODE=true

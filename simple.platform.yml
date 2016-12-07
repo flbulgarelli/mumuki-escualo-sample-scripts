@@ -1,16 +1,16 @@
 # simple platform is complete atheneum + classroom solution
 local:
- - bootstrap --monit-password <MONIT_PASSWORD>
+ - bootstrap --monit-password '<MONIT_PASSWORD>'
 remote:
- - env set SECRET_KEY_BASE=<SECRET>
+ - env set SECRET_KEY_BASE='<SECRET>'
            PGDATABASE=atheneum
-           POSTGRESQL_DB_USERNAME=<POSTGRE_USERNAME>
-           POSTGRESQL_DB_PASSWORD=<POSTGRE_PASSWORD>
+           POSTGRESQL_DB_USERNAME='<POSTGRE_USERNAME>'
+           POSTGRESQL_DB_PASSWORD='<POSTGRE_PASSWORD>'
            POSTGRESQL_DB_HOST=localhost
  - plugin install postgre
  - plugin install mongo
- - plugin install node # necessary to allow compilation of assets
- - plugin install rabbit --rabbit-admin-password <RABBIT_ADMIN_PASSWORD>
+ - plugin install node
+ - plugin install rabbit --rabbit-admin-password '<RABBIT_ADMIN_PASSWORD>'
  - artifact create service atheneum 8081
  - artifact create service classroom-api 8082
  - artifact create site classroom
