@@ -1,17 +1,13 @@
 # simple server Atheneum is a normal Atheneum that has
 # simply discards contents of queue
-local:
  - bootstrap --monit-password '<MONIT_PASSWORD>'
-remote:
  - env set SECRET_KEY_BASE='<SECRET>'
            PGDATABASE=atheneum
-           POSTGRESQL_DB_USERNAME='<POSTGRE_USERNAME>'
-           POSTGRESQL_DB_PASSWORD='<POSTGRE_PASSWORD>'
+           POSTGRESQL_DB_USERNAME='<POSTGRES_USERNAME>'
+           POSTGRESQL_DB_PASSWORD='<POSTGRES_PASSWORD>'
            POSTGRESQL_DB_HOST=localhost
            MUMUKI_QUEULESS_MODE=true
- - plugin install postgre
- - artifact create service atheneum 80
- - rake atheneum 'db:create db:schema:load db:seed'
-deploy:
+ - plugin install postgres --pg-username '<POSTGRES_USERNAME>' --pg-password '<POSTGRES_PASSWORD>'
+ - artifact create service atheneum '<ATHENEUM_PORT>'
  - deploy atheneum mumuki/mumuki-atheneum
 
