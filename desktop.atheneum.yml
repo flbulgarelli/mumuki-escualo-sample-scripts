@@ -10,7 +10,8 @@
            POSTGRESQL_DB_HOST=localhost
            MUMUKI_QUEUELESS_MODE=true
            MUMUKI_SINGLE_USER_MODE=true
- - plugin install postgre # should be sqlite in the future
+ - plugin install monit  --monit-password '<MONIT_PASSWORD>'
+ - plugin install postgres --pg-username '<POSTGRES_USERNAME>' --pg-password '<POSTGRES_PASSWORD>' # should be sqlite in the future
  - artifact create service atheneum 80
  - rake atheneum 'db:create db:schema:load db:seed'
  - deploy atheneum mumuki/mumuki-atheneum
