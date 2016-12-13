@@ -5,13 +5,13 @@
  - bootstrap
  - env set SECRET_KEY_BASE='<SECRET>'
            PGDATABASE=atheneum
-           POSTGRESQL_DB_USERNAME='<POSTGRE_USERNAME>'
-           POSTGRESQL_DB_PASSWORD='<POSTGRE_PASSWORD>'
+           POSTGRESQL_DB_USERNAME='<POSTGRES_USERNAME>'
+           POSTGRESQL_DB_PASSWORD='<POSTGRES_PASSWORD>'
            POSTGRESQL_DB_HOST=localhost
            MUMUKI_QUEUELESS_MODE=true
            MUMUKI_SINGLE_USER_MODE=true
-           MUMUKI_BIBLIOTHECA_URL=http://bibliotheca.mumuki.io
-           MUMUKI_THESAURUS_URL=http://thesaurus.mumuki.io
+           MUMUKI_BIBLIOTHECA_URL='http://bibliotheca.mumuki.io'
+           MUMUKI_THESAURUS_URL='http://thesaurus.mumuki.io'
  - plugin install monit  --monit-password '<MONIT_PASSWORD>'
  - plugin install postgres --pg-username '<POSTGRES_USERNAME>' --pg-password '<POSTGRES_PASSWORD>' # should be sqlite in the future
  - artifact create service atheneum '<ATHENEUM_PORT>'
