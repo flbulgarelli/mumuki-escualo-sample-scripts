@@ -1,19 +1,19 @@
-# proxy server Atheneum is a normal Atheneum
-# that acts as a buffering proxy to a classroom or a cloud atheneum - it accepts
-# submissions and keeps them in queue that has no consumers
-local:
+# online Atheneum is a complete server that is ready to e integrated with
+# the rest of the platform
+#
  - bootstrap
-remote:
  - env set SECRET_KEY_BASE='<SECRET>'
            PGDATABASE=atheneum
            POSTGRESQL_DB_USERNAME='<POSTGRE_USERNAME>'
            POSTGRESQL_DB_PASSWORD='<POSTGRE_PASSWORD>'
            POSTGRESQL_DB_HOST=localhost
+           MUMUKI_BIBLIOTHECA_URL='http://bibliotheca.mumuki.io'
+           MUMUKI_THESAURUS_URL='http://thesaurus.mumuki.io'
+           MUMUKI_AUTH0_CLIENT_ID=<AUTH0_CLIENT_ID>
+           MUMUKI_AUTH0_CLIENT_SECRET=<AUTH0_CLIENT_SECRET>
+           MUMUKI_AUTH0_DOMAIN=<AUTH0_DOMAIN>
  - plugin install monit  --monit-password '<MONIT_PASSWORD>'
  - plugin install postgres --pg-username '<POSTGRES_USERNAME>' --pg-password '<POSTGRES_PASSWORD>'
  - plugin install rabbit --rabbit-admin-password '<RABBIT_ADMIN_PASSWORD>'
- - artifact create service atheneum 80
- - rake atheneum 'db:create db:schema:load db:seed'
-deploy:
+ - artifact create service atheneum '<ATHENEUM_PORT>'
  - deploy atheneum mumuki/mumuki-atheneum
-
