@@ -1,3 +1,5 @@
+:warning: THIS REPOSITORY IS DEPRECATED :warning:
+
 # mumuki-escualo-sample-scripts
 Sample scripts for deploying Mumuki Platform with escualo
 
